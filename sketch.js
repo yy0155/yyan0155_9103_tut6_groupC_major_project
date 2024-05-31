@@ -1,3 +1,4 @@
+// Variables to manage colors and settings
 let fixedColor;
 let size;
 let angle = 0; 
@@ -17,12 +18,14 @@ let randomCircles = [];
 let isMosaicMode = false;  
 
 function setup() {
-  // Calculate the size of the canvas
+  // Calculate the size of the canvas based on window
   
   size = Math.min(windowWidth, windowHeight);
   scaleFactor = Math.min(windowWidth, windowHeight) / 1024;
   createCanvas(size, size);
   angleMode(DEGREES); 
+
+  //Keyboard events to toggle modes and add spaceships
 document.addEventListener('keydown', function(event) {
     if (event.key === ' ') {  
         // mosaicmode
@@ -36,9 +39,8 @@ document.addEventListener('keydown', function(event) {
         draw();  
     }
 });
+
   noStroke();
-  
-  
   
   // Colors of the circles in the middle
   largeCircleColors = [
@@ -469,7 +471,6 @@ function drawComplexCircle(x, y, outerRadius, middleRadius, innerRadius) {
   ellipse(x, y, 2 * innerRadius, 2 * innerRadius);
 }
 
-
 function originalImage() {
   background(3, 61, 94);
   let x = 512;
@@ -567,8 +568,6 @@ function originalImage() {
 }
 
   } else {
-    // 
-
 
     // middle circle
     noStroke();
