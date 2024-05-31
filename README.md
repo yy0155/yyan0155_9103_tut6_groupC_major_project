@@ -33,7 +33,7 @@
 - In my individual section, I aim to depict a pixelated miniature universe. The stars revolve around the center of the galaxy, while users can summon small spaceships to embark on adventures in space.
 
 ## Part 4 : Brief technical note.
--Tools and technique from outside the course
+- Tools and technique from outside the course
 ```js
 // Function of special pattern2
 function drawSpecialCircle(x, y, outerRadius, innerRadius) {
@@ -48,7 +48,19 @@ function drawSpecialCircle(x, y, outerRadius, innerRadius) {
 }
 ```
 
-- To better adjust the parameters and complete the special circle, I used arc.
+- To better adjust the parameters and complete the special circle, I used **arc**.
 
-> Here's the reference of *arc**.
->https://p5js.org/reference/#/p5/arc
+> Here's the reference of **arc**: https://p5js.org/reference/#/p5/arc
+
+```js
+  if (isMosaicMode) {
+    if (frameCounter === 0) {
+      //This is the code of array 
+      let lastColor = largeCircleColors.pop();
+      largeCircleColors.unshift(lastColor); 
+    }
+```
+
+- In order to facilitate the implementation of the colour change of the centre circle in mosaic mode, I used **unshift**
+> Here's the reference of **unshift**: https://www.w3schools.com/jsref/jsref_unshift.asp
+
