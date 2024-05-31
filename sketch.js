@@ -718,3 +718,35 @@ function drawComplexCircleMosaic(x, y, outerRadius, middleRadius, innerRadius, m
     }
   }
 }
+
+class Spaceship {
+  constructor(x, y, speed, direction) {
+    this.x = x;
+    this.y = y;
+    this.speed = speed;
+    this.direction = direction;
+    this.color = color(random(255), random(255), random(255)); 
+  }
+
+  update() {
+    this.x += this.speed * cos(this.direction);
+    this.y += this.speed * sin(this.direction);
+  }
+
+  draw() {
+    push();
+    translate(this.x, this.y);
+    rotate(this.direction);
+    noStroke();
+
+    fill(this.color);
+    ellipse(0, 0, 60, 30); 
+    fill(255); 
+    ellipse(0, -5, 25, 25); 
+    
+    fill(255, 255, 255, 50);
+    ellipse(0, 0, 70, 40); 
+
+    pop();
+  }
+}
