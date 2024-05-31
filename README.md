@@ -46,5 +46,9 @@ function drawSpecialCircle(x, y, outerRadius, innerRadius) {
   fill(181, 101, 167);
   ellipse(x, y, 2 * innerRadius, 2 * innerRadius);
 }
+```
 
 - To better adjust the parameters and complete the special circle, I used arc.
+
+> Here's the reference of *arc**.
+>https://p5js.org/reference/#/p5/arc
