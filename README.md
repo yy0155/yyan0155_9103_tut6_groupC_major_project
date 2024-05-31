@@ -21,6 +21,6 @@
 ## Part 2 : Details of my individual approach to animating the group code.
 
 - I chose **User Input** to drive my personal code, allowing users to interact with the image using keyboard buttons.
-- I attempted to transform the original image display by changing from conventional geometric shapes to a mosaic style, giving it more vibrancy and a modern feel. The mosaic, composed of small blocks, also brings a unique texture, potentially creating a novel visual experience. 
-- By adding rotation, I introduced dynamism to the image. 
-- The inclusion of small spaceship components adds interactivity and fun, making the scene more engaging and narrative-driven.
+1. I attempted to transform the original image display by changing from conventional geometric shapes to a mosaic style, giving it more vibrancy and a modern feel. The mosaic, composed of small blocks, also brings a unique texture, potentially creating a novel visual experience. 
+2. By adding rotation, I introduced dynamism to the image. 
+3. The inclusion of small spaceship components adds interactivity and fun, making the scene more engaging and narrative-driven.
