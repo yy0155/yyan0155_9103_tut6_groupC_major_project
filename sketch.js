@@ -632,3 +632,89 @@ function windowResized() {
 
 }
 
+function drawDuelCircleMosaic(x, y, radius, delta, mosaicSize) {
+  let outerRadius = radius;
+  let innerRadius = radius - delta;
+
+  for (let dx = -outerRadius; dx <= outerRadius; dx += mosaicSize) {
+    for (let dy = -outerRadius; dy <= outerRadius; dy += mosaicSize) {
+      let distance = sqrt(dx * dx + dy * dy);
+      if (distance <= outerRadius) {
+        fill(233, 75, 60);
+        rect(x + dx, y + dy, mosaicSize, mosaicSize);
+      }
+    }
+  }
+
+  for (let dx = -innerRadius; dx <= innerRadius; dx += mosaicSize) {
+    for (let dy = -innerRadius; dy <= innerRadius; dy += mosaicSize) {
+      let distance = sqrt(dx * dx + dy * dy);
+      if (distance <= innerRadius) {
+        fill(119, 197, 147);
+        rect(x + dx, y + dy, mosaicSize, mosaicSize);
+      }
+    }
+  }
+}
+
+function drawSpecialCircleMosaic(x, y, outerRadius, innerRadius, mosaicSize) {
+  fill(255, 215, 0);
+  for (let dx = -outerRadius; dx <= outerRadius; dx += mosaicSize) {
+      for (let dy = -outerRadius; dy <= 0; dy += mosaicSize) {
+          if (dx * dx + dy * dy <= outerRadius * outerRadius) { 
+              rect(x + dx, y + dy, mosaicSize, mosaicSize);
+          }
+      }
+  }
+
+  fill(75, 156, 211);
+  for (let dx = -outerRadius; dx <= outerRadius; dx += mosaicSize) {
+      for (let dy = 0; dy <= outerRadius; dy += mosaicSize) {
+          if (dx * dx + dy * dy <= outerRadius * outerRadius) { 
+              rect(x + dx, y + dy, mosaicSize, mosaicSize);
+          }
+      }
+  }
+
+  fill(181, 101, 167);
+  for (let dx = -innerRadius; dx <= innerRadius; dx += mosaicSize) {
+      for (let dy = -innerRadius; dy <= innerRadius; dy += mosaicSize) {
+          if (dx * dx + dy * dy <= innerRadius * innerRadius) { 
+              rect(x + dx, y + dy, mosaicSize, mosaicSize);
+          }
+      }
+  }
+}
+
+function drawComplexCircleMosaic(x, y, outerRadius, middleRadius, innerRadius, mosaicSize) {
+
+  for (let dx = -outerRadius; dx <= outerRadius; dx += mosaicSize) {
+    for (let dy = -outerRadius; dy <= outerRadius; dy += mosaicSize) {
+      let distance = sqrt(dx * dx + dy * dy);
+      if (distance <= outerRadius) {
+        fill(255, 165, 0);  
+        rect(x + dx, y + dy, mosaicSize, mosaicSize);
+      }
+    }
+  }
+
+  for (let dx = -middleRadius; dx <= middleRadius; dx += mosaicSize) {
+    for (let dy = -middleRadius; dy <= middleRadius; dy += mosaicSize) {
+      let distance = sqrt(dx * dx + dy * dy);
+      if (distance <= middleRadius) {
+        fill(233, 75, 60);  
+        rect(x + dx, y + dy, mosaicSize, mosaicSize);
+      }
+    }
+  }
+
+  for (let dx = -innerRadius; dx <= innerRadius; dx += mosaicSize) {
+    for (let dy = -innerRadius; dy <= innerRadius; dy += mosaicSize) {
+      let distance = sqrt(dx * dx + dy * dy);
+      if (distance <= innerRadius) {
+        fill(119, 197, 147); 
+        rect(x + dx, y + dy, mosaicSize, mosaicSize);
+      }
+    }
+  }
+}
