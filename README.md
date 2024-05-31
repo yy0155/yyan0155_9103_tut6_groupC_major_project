@@ -27,9 +27,24 @@
 
 ## Part 3 : What's my inspiration?
 
-> Here's my inspiration source.
+> Here's my **inspiration source**.
 >![Figure 4](assets/Figure4.png)
 - I love playing pixel games because pixel art provides a unique visual experience, with a delicate, cute, and interesting feel. It makes me feel like the pixel world is a miniature, virtual universe. Therefore, I chose a space-themed pixel artwork as my source of inspiration.
 - In my individual section, I aim to depict a pixelated miniature universe. The stars revolve around the center of the galaxy, while users can summon small spaceships to embark on adventures in space.
 
 ## Part 4 : Brief technical note.
+-Tools and technique from outside the course
+```js
+// Function of special pattern2
+function drawSpecialCircle(x, y, outerRadius, innerRadius) {
+  fill(75, 156, 211);
+  arc(x, y, 2 * outerRadius, 2 * outerRadius, 0, PI);
+
+  fill(255, 215, 0);
+  arc(x, y, 2 * outerRadius, 2 * outerRadius, PI, TWO_PI);
+
+  fill(181, 101, 167);
+  ellipse(x, y, 2 * innerRadius, 2 * innerRadius);
+}
+
+- To better adjust the parameters and complete the special circle, I used arc.
