@@ -481,7 +481,7 @@ function originalImage() {
 
   if (isMosaicMode) {
     if (frameCounter === 0) {
-      //This is the code of array s
+      //This is the code of array 
       let lastColor = largeCircleColors.pop();
       largeCircleColors.unshift(lastColor); 
     }
